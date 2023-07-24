@@ -4,10 +4,10 @@ import {useState} from 'react';
 
 function App() {
   const [input,setinput]=useState('');
-  const [todolist,settodolist]=useState([])
+  const [todolist,settodolist]=useState([]);
   const addtodo=()=>{
         const task={
-          id:todolist.length==0 ? 1:todolist[todolist.length].id+1,
+          id:todolist.length===0?1:todolist[todolist.length-1].id+1,
           taskName:input
         }
         settodolist([...todolist,task]);
@@ -17,12 +17,12 @@ function App() {
         const newlist=todolist.filter((todo)=>{
           return todo.id!==id;
         })
-        console.log(newlist);
         settodolist(newlist);
   }
   return (
     <div className="App">
-      <div className='addtodo'>
+      <div className="todo__container">
+      <div className='add__todo'>
         <input type='text' placeholder='add todo' onChange={(e)=>{
           setinput(e.target.value);
         }}></input>
@@ -35,6 +35,7 @@ function App() {
                 <button onClick={()=>deleteTodo(todo.id)}>Delete</button>
                 </div>
         })}
+      </div>
       </div>
     </div>
   );
