@@ -1,5 +1,5 @@
 
-/*import './App.css';
+import './App.css';
 import {useState} from 'react';
 
 function App() {
@@ -42,38 +42,4 @@ function App() {
 }
 
 
-export default App;*/
-import React from "react";
-import './App.css'
-import {useState,useContext} from 'react';
-import {Home} from './pages/Home';
-import {Profile} from './pages/Profile';
-import {Contact} from './pages/Contact';
-import {Link} from 'react-router-dom';
-import {Navbar} from './pages/Navbar';
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
-import { createContext } from "react";
-import {QueryClient,QueryClientProvider} from '@tanstack/react-query'
-
-export const  AppContext=createContext();
-function App(){
-  const [username,setusername]=useState('melvin');
-  const client=new QueryClient();
-  return(
-    <div className='App'>
-  <QueryClientProvider client={client}>
-    <AppContext.Provider value={{username,setusername}}>
-    <Router>
-      <Navbar/>
-      <Routes>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-      </Routes>
-    </Router>
-    </AppContext.Provider>
-  </QueryClientProvider>
-    </div>
-  );
-}
 export default App;
