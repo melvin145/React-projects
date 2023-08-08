@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  background-color: #ffffff;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+}
+a{
+  text-decoration: none;
+  z-index: 0;
+  color: white;
+}
+.App {
+  max-width: calc(100% - 3rem);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  min-height: 100vh;
+}
+.main__container{
+  padding: 2rem;
+  color: black;
+  position: relative;
+}
+
+.icon i{
+  padding-left: 1rem;
+  font-size: 1.4rem;
+}
+.notes__container{
+  margin-top: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,3fr));
+  grid-auto-flow: dense;
+  grid-gap: 1em;
+  grid-row-gap:1rem ;
+
+}
+.note__container{
+  background-color: #F6E27F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size:cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 300px;
+}
+.note__title h1{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #161b33;
+}
+.note__body{
+  margin-top: 1rem;
+  font-size: .9rem;
+  font-weight: 400;
+  height: 90px;
+  overflow: hidden;
+  z-index: 1000;
+  color: #525252;
+}
+.note__date p{
+  align-self: flex-end;
+  margin-top: .3rem;
+  color: #525252;
+}
+.Notepage__container{
+  margin-top: 5rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.yellow{
+  background-color: #F6E27F;
+}
+.header h1{
+  font-size: 3rem;
+  width: 100%;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+textarea{
+  background:none;
+  border: none;
+  color: #1f1d25;
+  width: calc(100% - 20px);
+  resize: none;
+  min-height: 100vh;
+  scrollbar-width: none;
+  outline: none;
+  font-size: 1.8rem;
+}
+.header{
+  width: 100%;
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+.header button{
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background:none;
+  outline: none;
+  border: none;
+}
+.header i{
+  color: #161b33;
+  font-size: 3.5rem;
+}
+#delete{
+  font-size: 2.5rem;
+}
+.add__button{
+  font-size: 48px;
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  background: #613eff;
+  background-color: #9893DA;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add__button > svg {
+  fill: #f3f6f9;
+}
+.add{
+  font-size: 1.5rem;
+  color: #161b33;
+  cursor: pointer;
+}
+.heading h1{
+  font-size: 4rem;
+  padding-left: 10px;
+}
