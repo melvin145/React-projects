@@ -10,8 +10,9 @@ export const Main=()=>{
             <div className="main__container">
                   <div className="container">
                         <Popular/>
-                        <Vegetarian/>
-                        <Protein/>
+                        {//<Vegetarian/>
+                        //<Protein/>
+                  }
                   </div>
             </div>
       )
